@@ -1,47 +1,62 @@
 <!DOCTYPE html>
-<html lang="fr"><head>
-		<title>Muski</title>
-		<meta charset="utf-8">
-	</head>
-	<body>
-        <h1>Bienvenue sur MusKi</h1>
-        <p>Bonjour et bienvenue sur ce wiki qui regroupe les meilleurs exercices de musculation et vous aide à cibler les muscles que vous souhaitez travailler.</p>
-        <img src="../images/dbz-goku.gif" alt="Goku charge son ki"/>
-        <p>L'objectif est simple : simplifier la musculation et la rendre accessible à tous.<br>Nous avons soigneusement organisé chaque catégorie et mis toute notre pédagogie dans nos écrits afin de créer les tutoriels les plus pertinents et efficaces possibles.</p>
-        <p>Voici les différentes parties : </p>
-        <table>
-            <tr>
-                <td>Catégorie</td>
-                <td>Description</td>
-            </tr>
-            <tr>
-                <td><a href="cardio.html">Le Cardio</a></td>
-                <td>Retrouvez de quoi travaillé votre cardio ici</td>
-            </tr>
-            <tr>
-                <td><a href="buste.html">Le Buste</a></td>
-                <td>Ciblez les abdominaux ici</td>
-            </tr>
-            <tr>
-                <td><a href="dos.html">Le Dos</a></td>
-                <td>Ciblez le dos ici</td>
-            </tr>
-            <tr>
-                <td><a href="jambes.html">Les Jambes</a></td>
-                <td>Ciblez les jambes ici</td>
-            </tr>
-            <tr>
-                <td><a href="bras.html">Les Bras</a></td>
-                <td>Retrouvez de quoi travaillé votre cardio ici</td>
-            </tr>
-            <tr>
-                <td><a href="epaule.html">Les épaules</a></td>
-                <td>Ciblez les épaules ici</td>
-            </tr>
-            <tr>
-                <td><a href="contact.html">Contactez nous</a></td>
-                <td>Pour nous connaître et s'échanger</td>
-            </tr>
-        </table>
-    </body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Muski</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <a href="accueil.html">ACCUEIL</a>
+        <img src="images/logo.png" class="logo">
+        <a href="contact.html">CONTACT</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="intro">
+        <h1>Bienvenue sur Muski</h1>
+        <p>
+            Bienvenue sur ce wiki qui regroupe les meilleurs exercices de musculation
+            et vous aide à cibler les muscles que vous souhaitez travailler.
+        </p>
+    </section>
+
+    <section class="personnage-zone">
+        <div class="cadre">
+            
+            <!-- Image de base -->
+            <img src="images/goku_base.png" class="base">
+
+            <!-- MUSCLES CLIQUABLES -->
+            <a href="bras.html">
+                <img src="images/bras.png" class="muscle bras">
+            </a>
+
+            <a href="jambes.html">
+                <img src="images/jambes.png" class="muscle jambes">
+            </a>
+
+            <a href="dos.html">
+                <img src="images/dos.png" class="muscle dos">
+            </a>
+
+            <a href="buste.html">
+                <img src="images/buste.png" class="muscle buste">
+            </a>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2025 MUSKI – Tous droits réservés</p>
+</footer>
+
+</body>
 </html>
