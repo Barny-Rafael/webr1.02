@@ -1,8 +1,11 @@
-/* --- Styles de base --- */
+/* --- Styles de base (Schéma Noir) --- */
 body {
     font-family: sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
+    /* Couleur de fond NOIRE pour le corps */
+    background-color: #000000; 
+    /* Texte de base clair */
+    color: #f4f4f4; 
 }
 .page-content {
     max-width: 900px;
@@ -10,10 +13,11 @@ body {
     padding: 20px;
 }
 
-/* --- Styles de l'En-tête (Header) --- */
+/* --- Style de l'En-tête (Header) --- */
 .header {
-    background-color: #333;
-    color: white;
+    /* Couleur de fond claire pour l'en-tête (blanc cassé) */
+    background-color: #f4f4f4; 
+    color: #000000;
     padding: 10px 0;
 }
 .nav-container {
@@ -25,7 +29,8 @@ body {
     padding: 0 20px;
 }
 .nav-link {
-    color: white;
+    /* COULEUR ORANGE pour les liens de navigation */
+    color: #FF8C00; 
     text-decoration: none;
     font-weight: bold;
 }
@@ -39,33 +44,34 @@ body {
 
 /* --- Styles de la Mise en Page Alternée (Flexbox) --- */
 .content-section {
-    display: flex; /* Active Flexbox */
-    align-items: flex-start; /* Alignement des colonnes en haut */
-    gap: 30px; /* Espace entre les colonnes */
+    display: flex; 
+    align-items: flex-start; 
+    gap: 30px; 
     margin-bottom: 40px;
     padding: 20px;
-    background-color: white;
+    /* Fond très sombre (noir cassé) pour les sections de contenu */
+    background-color: #222222; 
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Ombre plus intense sur fond sombre */
 }
 
 .illustration-colonne {
-    flex: 1; /* Prend une part de l'espace */
-    min-width: 250px; /* Taille minimale pour l'image */
+    flex: 1; 
+    min-width: 250px; 
 }
 
 .text-colonne {
-    flex: 2; /* Prend deux parts de l'espace (plus large pour le texte) */
+    flex: 2; 
 }
 
 /* ALTERNANCE : Texte à Droite (Image à Gauche) */
 .section-texte-droite {
-    flex-direction: row-reverse; /* Inverse l'ordre : Texte vient avant l'Image dans le code, mais s'affiche à droite */
+    flex-direction: row-reverse; 
 }
 
 /* ALTERNANCE : Texte à Gauche (Image à Droite) */
 .section-texte-gauche {
-    flex-direction: row; /* Ordre normal : Texte à Gauche, Image à Droite */
+    flex-direction: row; 
 }
 
 /* Style des images d'illustration */
@@ -74,8 +80,9 @@ body {
     height: auto;
     border-radius: 5px;
     display: block;
-    margin-top: 20px; /* Espace en haut de l'image */
-    background-color: #ccc; /* Pour les placeholders */
+    margin-top: 20px; 
+    /* Fond gris moyen pour les placeholders (pour que l'image ressorte du noir) */
+    background-color: #555555; 
     min-height: 150px;
 }
 
@@ -85,7 +92,7 @@ body {
 }
 
 .muscle-group-title {
-    list-style: none; /* Enlève la puce/numéro pour le titre de groupe */
+    list-style: none; 
     font-weight: bold;
     margin-top: 10px;
 }
@@ -95,12 +102,19 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    /* Bordures plus claires pour le contraste */
+    border: 1px solid #555555;
+    /* Fond du tableau noir cassé */
+    background-color: #111111; 
     margin-bottom: 40px;
-    background-color: #555;
-    color: white;
 }
-.exercices-table th, .exercices-table td {
-    border: 1px solid #ddd;
+.exercices-table td, .exercices-table th {
+    /* Bordures claires */
+    border: 1px solid #555555; 
     padding: 8px;
     text-align: left;
+}
+.exercices-table strong {
+    /* Rend les titres d'en-tête du tableau plus visibles */
+    color: #FF8C00; 
 }
