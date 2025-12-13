@@ -1,182 +1,103 @@
-/* =========================
-   RESET GLOBAL
-========================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* =========================
-   STYLE GLOBAL
-========================= */
+/* --- Styles de base --- */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #000;
-    color: #fff;
-    line-height: 1.6;
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+.page-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-/* =========================
-   HEADER
-========================= */
-header {
-    height: 80px;
-    background-color: #fff;
-    padding: 0 40px;
+/* --- Styles de l'En-tête (Header) --- */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
 }
-
 .nav-container {
-    height: 100%;
+    max-width: 900px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
 }
-
 .nav-link {
+    color: white;
     text-decoration: none;
-    color: #ff8c00;
     font-weight: bold;
-    font-size: 18px;
 }
-
-.nav-link:hover {
-    text-decoration: underline;
-}
-
-/* LOGO */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 .logo img {
-    max-height: 65px;
-    width: auto;
+    height: 50px;
+}
+.main-title {
+    text-align: center;
+    margin-top: 40px;
 }
 
-.logo span {
-    color: #000;
+/* --- Styles de la Mise en Page Alternée (Flexbox) --- */
+.content-section {
+    display: flex; /* Active Flexbox */
+    align-items: flex-start; /* Alignement des colonnes en haut */
+    gap: 30px; /* Espace entre les colonnes */
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.illustration-colonne {
+    flex: 1; /* Prend une part de l'espace */
+    min-width: 250px; /* Taille minimale pour l'image */
+}
+
+.text-colonne {
+    flex: 2; /* Prend deux parts de l'espace (plus large pour le texte) */
+}
+
+/* ALTERNANCE : Texte à Droite (Image à Gauche) */
+.section-texte-droite {
+    flex-direction: row-reverse; /* Inverse l'ordre : Texte vient avant l'Image dans le code, mais s'affiche à droite */
+}
+
+/* ALTERNANCE : Texte à Gauche (Image à Droite) */
+.section-texte-gauche {
+    flex-direction: row; /* Ordre normal : Texte à Gauche, Image à Droite */
+}
+
+/* Style des images d'illustration */
+.illustration-colonne img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin-top: 20px; /* Espace en haut de l'image */
+    background-color: #ccc; /* Pour les placeholders */
+    min-height: 150px;
+}
+
+/* Style spécifique aux listes dans les sections */
+.content-section ul, .content-section ol {
+    padding-left: 20px;
+}
+
+.muscle-group-title {
+    list-style: none; /* Enlève la puce/numéro pour le titre de groupe */
     font-weight: bold;
-    font-size: 22px;
+    margin-top: 10px;
 }
 
-/* =========================
-   CONTENU GÉNÉRAL
-========================= */
-main {
-    width: 70%;
-    margin: 40px auto;
-}
-
-h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: 26px;
-    margin: 40px 0 15px;
-    color: #ff8c00;
-}
-
-h3 {
-    font-size: 20px;
-    margin: 25px 0 10px;
-}
-
-p {
-    font-size: 18px;
-    margin-bottom: 15px;
-}
-
-ul, ol {
-    margin-left: 30px;
-    margin-bottom: 20px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-/* =========================
-   TABLES
-========================= */
-table {
+/* Style pour le tableau d'exercices */
+.exercices-table {
     width: 100%;
     border-collapse: collapse;
-    margin: 30px 0;
-    background-color: #1e1e1e;
+    margin-top: 20px;
 }
-
-table th,
-table td {
-    border: 1px solid #444;
-    padding: 12px;
+.exercices-table th, .exercices-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
     text-align: left;
-}
-
-table th {
-    background-color: #2a2a2a;
-    color: #ff8c00;
-}
-
-/* =========================
-   LIENS
-========================= */
-a {
-    color: #4aa3ff;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-    background-color: #000;
-    border-top: 1px solid #444;
-    padding: 15px 0;
-    text-align: center;
-    margin-top: 80px;
-}
-
-footer p {
-    font-size: 13px;
-    color: #bbb;
-    letter-spacing: 0.5px;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-@media screen and (max-width: 768px) {
-
-    header {
-        height: 70px;
-        padding: 0 20px;
-    }
-
-    main {
-        width: 90%;
-    }
-
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    .logo img {
-        max-height: 50px;
-    }
-
-    .logo span {
-        font-size: 18px;
-    }
 }
