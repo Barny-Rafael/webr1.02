@@ -32,10 +32,6 @@ body {
 .logo img {
     height: 50px;
 }
-.main-title {
-    text-align: center;
-    margin-top: 40px;
-}
 
 /* --- Styles de la Mise en Page Alternée (Flexbox) --- */
 .content-section {
@@ -103,4 +99,9 @@ body {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+}
+
+.exercices-table strong {
+    /* Rend les titres d'en-tête du tableau plus visibles */
+    color: #FF8C00; 
 }

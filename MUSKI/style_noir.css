@@ -37,10 +37,6 @@ body {
 .logo img {
     height: 50px;
 }
-.main-title {
-    text-align: center;
-    margin-top: 40px;
-}
 
 /* --- Styles de la Mise en Page Alternée (Flexbox) --- */
 .content-section {
