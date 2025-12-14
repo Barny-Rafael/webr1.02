@@ -59,12 +59,12 @@ body {
 }
 
 /* ALTERNANCE : Texte à Droite (Image à Gauche) */
-.section-texte-droite {
+.section-texte-gauche {
     flex-direction: row-reverse; /* Inverse l'ordre : Texte vient avant l'Image dans le code, mais s'affiche à droite */
 }
 
 /* ALTERNANCE : Texte à Gauche (Image à Droite) */
-.section-texte-gauche {
+.section-texte-droite {
     flex-direction: row; /* Ordre normal : Texte à Gauche, Image à Droite */
 }
 

@@ -65,12 +65,12 @@ body {
 }
 
 /* ALTERNANCE : Texte à Droite (Image à Gauche) */
-.section-texte-droite {
+.section-texte-gauche {
     flex-direction: row-reverse; 
 }
 
 /* ALTERNANCE : Texte à Gauche (Image à Droite) */
-.section-texte-gauche {
+.section-texte-droite {
     flex-direction: row; 
 }
 
