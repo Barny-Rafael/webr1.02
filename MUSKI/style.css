@@ -47,7 +47,8 @@ body {
 
 .illustration-colonne {
     flex: 1; /* Prend une part de l'espace */
-    min-width: 250px; /* Taille minimale pour l'image */
+    min-width: 250px;
+    max-width: 500px; /* Taille minimale pour l'image */
 }
 
 .text-colonne {
