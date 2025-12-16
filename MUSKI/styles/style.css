@@ -1,0 +1,108 @@
+/* --- Styles de base --- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+.page-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Styles de l'En-tête (Header) --- */
+.header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+}
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.nav-link {
+    color: #FF8C00;
+    text-decoration: none;
+    font-weight: bold;
+}
+.logo img {
+    height: 50px;
+}
+
+/* --- Styles de la Mise en Page Alternée (Flexbox) --- */
+.content-section {
+    display: flex; /* Active Flexbox */
+    align-items: flex-start; /* Alignement des colonnes en haut */
+    gap: 30px; /* Espace entre les colonnes */
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.illustration-colonne {
+    flex: 1; /* Prend une part de l'espace */
+    min-width: 250px;
+    max-width: 500px; /* Taille minimale pour l'image */
+}
+
+.text-colonne {
+    flex: 2; /* Prend deux parts de l'espace (plus large pour le texte) */
+}
+
+/* ALTERNANCE : Texte à Droite (Image à Gauche) */
+.section-texte-gauche {
+    flex-direction: row-reverse; /* Inverse l'ordre : Texte vient avant l'Image dans le code, mais s'affiche à droite */
+}
+
+/* ALTERNANCE : Texte à Gauche (Image à Droite) */
+.section-texte-droite {
+    flex-direction: row; /* Ordre normal : Texte à Gauche, Image à Droite */
+}
+
+/* Style des images d'illustration */
+.illustration-colonne img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin-top: 20px; /* Espace en haut de l'image */
+    background-color: #ccc; /* Pour les placeholders */
+    min-height: 150px;
+}
+
+/* Style spécifique aux listes dans les sections */
+.content-section ul, .content-section ol {
+    padding-left: 20px;
+}
+
+.muscle-group-title {
+    list-style: none; /* Enlève la puce/numéro pour le titre de groupe */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Style pour le tableau d'exercices */
+.exercices-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    background-color: #555;
+    color: white;
+}
+.exercices-table th, .exercices-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.exercices-table strong {
+    /* Rend les titres d'en-tête du tableau plus visibles */
+    color: #FF8C00; 
+}

@@ -1,0 +1,118 @@
+/* --- Styles de base (Schéma Noir) --- */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    /* Couleur de fond NOIRE pour le corps */
+    background-color: #000000;
+    background-image: url(''); 
+    /* Texte de base clair */
+    color: #f4f4f4; 
+}
+.page-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Style de l'En-tête (Header) --- */
+.header {
+    /* Couleur de fond claire pour l'en-tête blanc cassé */
+    background-color: #f4f4f4; 
+    color: #000000;
+    padding: 10px 0;
+}
+.nav-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+.nav-link {
+    /* COULEUR ORANGE pour les liens de navigation */
+    color: #FF8C00; 
+    text-decoration: none;
+    font-weight: bold;
+}
+.logo img {
+    height: 50px;
+}
+
+/* --- Styles de la Mise en Page Alternée (Flexbox) --- */
+.content-section {
+    display: flex; 
+    align-items: flex-start; 
+    gap: 30px; 
+    margin-bottom: 40px;
+    padding: 20px;
+    /* Fond très sombre (noir cassé) pour les sections de contenu */
+    background-color: #222222; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Ombre plus intense sur fond sombre */
+}
+
+.illustration-colonne {
+    flex: 1; 
+    min-width: 250px; 
+    max-width: 250px; 
+}
+
+.text-colonne {
+    flex: 2; 
+}
+
+/* ALTERNANCE : Texte à Droite (Image à Gauche) */
+.section-texte-gauche {
+    flex-direction: row-reverse; 
+}
+
+/* ALTERNANCE : Texte à Gauche (Image à Droite) */
+.section-texte-droite {
+    flex-direction: row; 
+}
+
+/* Style des images d'illustration */
+.illustration-colonne img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin-top: 20px; 
+    /* Fond gris moyen pour les placeholders (pour que l'image ressorte du noir) */
+    background-color: #555555; 
+    min-height: 150px;
+}
+
+/* Style spécifique aux listes dans les sections */
+.content-section ul, .content-section ol {
+    padding-left: 20px;
+}
+
+.muscle-group-title {
+    list-style: none; 
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Style pour le tableau d'exercices */
+.exercices-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    /* Bordures plus claires pour le contraste */
+    border: 1px solid #555555;
+    /* Fond du tableau noir cassé */
+    background-color: #111111; 
+    margin-bottom: 40px;
+}
+.exercices-table td, .exercices-table th {
+    /* Bordures claires */
+    border: 1px solid #555555; 
+    padding: 8px;
+    text-align: left;
+}
+.exercices-table strong {
+    /* Rend les titres d'en-tête du tableau plus visibles */
+    color: #FF8C00; 
+}
