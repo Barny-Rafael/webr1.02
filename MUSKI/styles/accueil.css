@@ -1,28 +1,22 @@
-/* =========================
-   RESET DE BASE
-========================= */
+/* reset complet*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* =========================
-   STYLE GLOBAL
-========================= */
+/* style global */
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #000;
     color: #fff;
 }
 
-/* =========================
-   HEADER / NAVBAR
-========================= */
+/* header */
 header {
-    height: 80px;                /* HAUTEUR FIXE */
+    height: 80px;                
     background-color: #fff;
-    padding: 0 40px;             /* PAS de padding vertical */
+    padding: 0 40px;             
 }
 
 .navbar {
@@ -43,16 +37,14 @@ header {
     text-decoration: underline;
 }
 
-/* LOGO */
+/* logo */
 .logo {
-    max-height: 100px;            /* CONTRAINT le logo */
+    max-height: 100px;            
     width: auto;
     display: block;
 }
 
-/* =========================
-   INTRO TEXTE
-========================= */
+/* introduction */
 .intro {
     text-align: center;
     margin: 40px auto;
@@ -69,18 +61,14 @@ header {
     line-height: 1.6;
 }
 
-/* =========================
-   ZONE PERSONNAGE
-========================= */
+/* zone personnage */
 .personnage-zone {
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
 }
 
-/* =========================
-   CADRE
-========================= */
+/* cadre */
 .cadre {
     position: relative;
     background-color: #3d3d3d;
@@ -89,17 +77,13 @@ header {
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
 }
 
-/* =========================
-   IMAGE DE BASE
-========================= */
+/* image de fond non-cliquable */
 .base {
     width: 300px;
     display: block;
 }
 
-/* =========================
-   MUSCLES CLIQUABLES
-========================= */
+/* images cliquable */
 .muscle {
     position: absolute;
     top: 30px;
@@ -114,9 +98,7 @@ header {
     transform: scale(1.01);
 }
 
-/* =========================
-   AJUSTEMENTS INDIVIDUELS
-========================= */
+/* ajustements individuels des muscles */
 .bras {
     top: 4%;
     left: 8,3%;
@@ -140,9 +122,7 @@ clip-path: polygon(15% 30%, 14% 28%, 14% 26%, 17% 25%, 20% 24%, 23% 23%, 27% 24%
     clip-path: polygon(39% 34%, 43% 32%, 53% 32%, 57% 34%, 57% 36%, 56% 38%, 50% 39%, 43% 39%, 39% 38%);
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* footer*/
 footer {
     background-color: #2b2b2b;
     padding: 25px;
