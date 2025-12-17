@@ -1,0 +1,188 @@
+/* =========================
+   RESET DE BASE
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   STYLE GLOBAL
+========================= */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* =========================
+   HEADER / NAVBAR
+========================= */
+header {
+    height: 80px;                /* HAUTEUR FIXE */
+    background-color: #fff;
+    padding: 0 40px;             /* PAS de padding vertical */
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ff8c00;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* LOGO */
+.logo {
+    max-height: 100px;            /* CONTRAINT le logo */
+    width: auto;
+    display: block;
+}
+
+/* =========================
+   INTRO TEXTE
+========================= */
+.intro {
+    text-align: center;
+    margin: 40px auto;
+    width: 70%;
+}
+
+.intro h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* =========================
+   ZONE PERSONNAGE
+========================= */
+.personnage-zone {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+/* =========================
+   CADRE
+========================= */
+.cadre {
+    position: relative;
+    background-color: #3d3d3d;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+/* =========================
+   IMAGE DE BASE
+========================= */
+.base {
+    width: 300px;
+    display: block;
+}
+
+/* =========================
+   MUSCLES CLIQUABLES
+========================= */
+.muscle {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 300px;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.muscle:hover {
+    filter: brightness(1.4);
+    transform: scale(1.01);
+}
+
+/* =========================
+   AJUSTEMENTS INDIVIDUELS
+========================= */
+.bras {
+    top: 4%;
+    left: 8,3%;
+    position: absolute;
+    clip-path: polygon(70% 29%, 73% 30%, 77% 30%, 80% 30%, 82% 30%, 84% 31%, 84% 32%, 86% 33%, 86% 36%, 86% 36%, 89% 38%, 91% 40%, 92% 42%, 92% 44%, 91% 46%, 84% 46%, 82% 43%, 79% 42%, 77% 40%, 77% 37%, 72% 35%, 70% 33%, 69% 29%);
+}
+.epaules {
+    position: absolute;
+clip-path: polygon(15% 30%, 14% 28%, 14% 26%, 17% 25%, 20% 24%, 23% 23%, 27% 24%, 29% 24%, 33% 23%, 38% 22%, 41% 23%, 45% 25%, 45% 26%, 40% 25%, 34% 26%, 31% 27%, 28% 29%, 21% 30%);}
+.jambes {
+    position: absolute;
+    clip-path: polygon(33% 41%, 36% 41%, 37% 42%, 35% 43%, 39% 43%, 41% 42%, 47% 42%, 52% 42%, 57% 42%, 61% 42%, 63% 42%, 66% 43%, 67% 44%, 68% 46%, 69% 48%, 70% 50%, 72% 51%, 72% 52%, 75% 54%, 78% 56%, 79% 58%, 81% 61%, 85% 63%, 82% 62%, 86% 64%, 84% 64%, 83% 65%, 85% 66%, 89% 66%, 84% 67%, 84% 68%, 85% 68%, 82% 68%, 80% 68%, 79% 67%, 80% 66%, 80% 65%, 78% 65%, 77% 66%, 75% 66%, 72% 65%, 70% 66%, 68% 68%, 66% 69%, 68% 71%, 68% 72%, 72% 73%, 74% 74%, 77% 76%, 82% 76%, 84% 75%, 86% 75%, 88% 75%, 88% 73%, 85% 72%, 88% 72%, 91% 72%, 92% 72%, 92% 73%, 94% 73%, 93% 73%, 97% 74%, 96% 75%, 94% 75%, 95% 76%, 94% 75%, 97% 77%, 98% 78%, 95% 77%, 93% 77%, 95% 78%, 94% 79%, 94% 80%, 93% 80%, 92% 80%, 92% 80%, 90% 81%, 87% 82%, 85% 82%, 85% 82%, 82% 82%, 79% 82%, 77% 82%, 74% 82%, 70% 81%, 64% 82%, 67% 81%, 66% 80%, 63% 80%, 65% 79%, 61% 79%, 60% 78%, 63% 75%, 63% 73%, 60% 72%, 61% 71%, 58% 70%, 55% 67%, 53% 62%, 52% 59%, 49% 56%, 48% 55%, 45% 57%, 43% 62%, 42% 66%, 41% 68%, 38% 70%, 38% 72%, 36% 73%, 36% 74%, 40% 76%, 37% 77%, 37% 77%, 36% 78%, 34% 78%, 31% 78%, 28% 79%, 27% 80%, 24% 82%, 27% 81%, 30% 80%, 33% 80%, 36% 79%, 39% 80%, 41% 80%, 40% 81%, 42% 82%, 42% 82%, 40% 82%, 40% 83%, 37% 83%, 35% 83%, 32% 83%, 31% 83%, 29% 83%, 26% 82%, 23% 82%, 19% 82%, 17% 82%, 12% 81%, 8% 79%, 6% 78%, 8% 76%, 7% 75%, 11% 73%, 12% 72%, 14% 70%, 11% 68%, 16% 66%, 17% 63%, 13% 64%, 13% 62%, 10% 63%, 14% 61%, 13% 60%, 14% 60%, 18% 60%, 20% 59%, 22% 61%, 26% 60%, 32% 59%, 28% 57%, 25% 56%, 24% 54%, 22% 57%, 19% 59%, 15% 59%, 16% 58%, 16% 57%, 13% 58%, 15% 57%, 16% 56%, 20% 55%, 24% 53%, 24% 50%, 26% 48%, 28% 45%, 29% 43%, 32% 42%);
+ }
+.dos {
+    
+    position: absolute;
+    clip-path: polygon(57% 38%, 59% 36%, 61% 34%, 62% 32%, 66% 31%, 70% 30%, 70% 31%, 70% 34%, 68% 35%, 65% 37%, 62% 39%, 57% 38%);}
+.buste { 
+    position: absolute;
+    clip-path: polygon(27% 30%, 28% 28%, 32% 26%, 38% 26%, 45% 26%, 48% 26%, 55% 26%, 63% 26%, 67% 28%, 70% 29%, 68% 31%, 63% 32%, 56% 32%, 51% 31%, 46% 31%, 41% 32%, 35% 32%, 30% 31%);
+}
+.cardio {
+    
+    position: absolute;
+    clip-path: polygon(39% 34%, 43% 32%, 53% 32%, 57% 34%, 57% 36%, 56% 38%, 50% 39%, 43% 39%, 39% 38%);
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: #2b2b2b;
+    padding: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* =========================
+   RESPONSIVE MOBILE
+========================= */
+@media screen and (max-width: 768px) {
+
+    header {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .logo {
+        max-height: 55px;
+    }
+
+    .intro {
+        width: 90%;
+    }
+
+    .intro h1 {
+        font-size: 28px;
+    }
+
+    .base,
+    .muscle {
+        width: 220px;
+    }
+
+    .cadre {
+        padding: 20px;
+    }
+}
