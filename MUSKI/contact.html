@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Muski - Contact</title>
+    <meta name="description" content="Contactez l'équipe Muski pour donner vos impressions sur le site, poser des questions ou envoyer des suggestions.">
+    <link id="theme" rel="stylesheet" href="styles/style_noir.css">
+    <script src="bouton.js"></script> 
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link">ACCUEIL</a>
+            <div class="logo">
+                <img src="./images/logo.png" alt="Muski logo">
+            </div>
+            <a href="contact.html" class="nav-link">CONTACT</a>
+        </div>
+    </header>
+
+    <main class="page-content">
+        
+        <div class="content-section section-texte-droite">
+            
+            <div class="text-colonne">
+                <h1>Nous Contacter</h1>
+                <p>Vos impressions sont importantes ! Utilisez le formulaire ci-dessous pour nous faire part de vos commentaires, suggestions ou questions. Nous vous répondrons dans les plus brefs délais.</p>
+                
+                <form id="form" action="mailto:my@e-mail?content-type=text/html&amp;subject=Site%20Web" method="post" enctype="text/plain" class="contact-form">
+                    <div class="form-group">
+                        <label for="prenom">Prénom :</label>
+                        <input id="prenom" type="text" name="prenom" value="" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="nom">Nom :</label>
+                        <input id="nom" type="text" name="nom" value="" required>
+                    </div>
+                    
+                    <div class="form-group radio-group">
+                        <input id="sexeHomme" type="radio" name="sexe" value="homme"><label for="sexeHomme">Homme</label>
+                        <input id="sexeFemme" type="radio" name="sexe" value="femme"><label for="sexeFemme">Femme</label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="impression">Votre Message :</label>
+                        <textarea id="impression" name="impression" rows="5" cols="50" placeholder="Donnez vos impressions sur le site..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="submit" value="Envoyer le message" class="button">
+                    </div>
+                </form>
+            </div>            
+        </div>
+    
+    </main>
+
+    <footer class="header">
+        <div class="footer-content-section">        
+            <div class="text-colonne">
+                <p>MUSKI</p>
+                <p>@2025</p>
+                <p>Privacy Terms</p>
+            </div>
+            <div class="text-colonne">
+                <h3>Entraînements</h3>
+                <ul>
+                    <li><a href="bras.html" class="footer-link">Les Bras</a></li>
+                    <li><a href="jambes.html" class="footer-link">Les Jambes</a></li>
+                    <li><a href="epaules.html" class="footer-link">Les Épaules</a></li>
+                    <li><a href="cardio.html" class="footer-link">Le Cardio</a></li>
+                </ul>
+            </div>
+            <div class="text-colonne">
+                <h3>Fondateurs</h3>
+                <ul>
+                    <li>Kenzi Yacini</li>
+                    <li>Milann Becherini</li>
+                    <li>Rafael Barny</li>
+                </ul>
+            </div>
+            <div class="text-colonne">
+                <h3>Sécurité</h3>
+                <ul>
+                    <li>Responsabilité</li>
+                </ul>
+            </div>
+            <div class="text-colonne">
+                <h3>Fonctionnalités</h3>
+                <p><a href="#top" class="footer-link" title="Revenir en haut de page">Revenir en haut</a></p>
+                <p><button id="toggle-theme" class="button">Changer de thème</button></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

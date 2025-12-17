@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Muski</title>
-    <link rel="stylesheet" href="./styles/accueil.css">
+    <meta name="description" content="Muski : Le wiki interactif des meilleurs exercices de musculation. Cliquez sur le muscle que vous voulez cibler (bras, épaules, jambes, buste) pour des entraînements efficaces.">
+    <link rel="stylesheet" href="styles/accueil.css">
+    <script src="js/bouton.js" defer></script>
 </head>
 
 <body>
 
-<header>
+<header class="header">
     <nav class="navbar">
-        <a href="accueil.html">ACCUEIL</a>
+        <a href="index.html">ACCUEIL</a>
         <img src="./images/logo.png" class="logo">
         <a href="contact.html">CONTACT</a>
     </nav>
@@ -58,9 +60,42 @@
 
 </main>
 
-<footer>
-    <p>© 2025 MUSKI – Tous droits réservés</p>
-</footer>
-
+<footer class="header">
+        <div class="footer-content-section">        
+            <div class="text-colonne">
+                <p>MUSKI</p>
+                <p>@2025</p>
+                <p>Privacy Terms</p>
+            </div>
+            <div class="text-colonne">
+                <h3>Entraînements</h3>
+                <ul>
+                    <li><a href="bras.html" class="footer-link">Les Bras</a></li>
+                    <li><a href="jambes.html" class="footer-link">Les Jambes</a></li>
+                    <li><a href="epaules.html" class="footer-link">Les Épaules</a></li>
+                    <li><a href="cardio.html" class="footer-link">Le Cardio</a></li>
+                </ul>
+            </div>
+            <div class="text-colonne">
+                <h3>Fondateurs</h3>
+                <ul>
+                    <li>Kenzi Yacini</li>
+                    <li>Milann Becherini</li>
+                    <li>Rafael Barny</li>
+                </ul>
+            </div>
+            <div class="text-colonne">
+                <h3>Sécurité</h3>
+                <ul>
+                    <li>Responsabilité</li>
+                </ul>
+            </div>
+            <div class="text-colonne">
+                <h3>Fonctionnalités</h3>
+                <p><a href="#top" class="footer-link" title="Revenir en haut de page">Revenir en haut</a></p>
+                <p><button id="toggle-theme" class="button">Changer de thème</button></p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
