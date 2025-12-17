@@ -1,3 +1,28 @@
+:root {
+    /* Thème clair */
+    --color-primary-light: #000000;
+    --background-light: #f4f4f4;
+    --text-light: #000000;
+    --reverse-text-light: #f4f4f4;
+
+    /* Thème sombre */
+    --color-primary-dark: #f4f4f4;
+    --background-dark: #000000;
+    --text-dark: #f4f4f4;
+    --reverse-text-dark: #000000;
+
+    /* Par défaut : thème clair */
+    --primary-color: var(--color-primary-dark);
+    --background-color: var(--background-dark);
+    --text-color: var(--text-dark);
+    --reverse-text-color: var(--reverse-text-dark);
+}
+.light {
+    --primary-color: var(--color-primary-light);
+    --background-color: var(--background-light);
+    --text-color: var(--text-light);
+    --reverse-text-color: var(--reverse-text-light);
+}
 /* reset complet*/
 * {
     margin: 0;
@@ -9,18 +34,15 @@
 body {
     font-family: sans-serif;
     margin: 0;
-    /* Couleur de fond noire pour le corps */
-    background-color: #000000;
-    background-image: url(''); 
-    /* Texte de base clair */
-    color: #f4f4f4; 
+    background-color: var(--background-color); 
+    color: var(--text-color); 
 }
 
 /* header */
 .header {
     /* Couleur de fond claire pour l'en-tête blanc cassé */
-    background-color: #f4f4f4; 
-    color: #000000;
+    background-color: var(--primary-color); 
+    color: var(--text-color);
     padding: 10px 0;
 }
 
@@ -128,7 +150,22 @@ clip-path: polygon(15% 30%, 14% 28%, 14% 26%, 17% 25%, 20% 24%, 23% 23%, 27% 24%
     position: absolute;
     clip-path: polygon(39% 34%, 43% 32%, 53% 32%, 57% 34%, 57% 36%, 56% 38%, 50% 39%, 43% 39%, 39% 38%);
 }
-
+.footer-content-section {
+    display: flex; 
+    align-items: flex-start; 
+    gap: 30px; 
+    margin-bottom: 40px;
+    padding: 20px;
+}
+.text-colonne {
+    flex: 2; 
+    text-decoration: none;
+    text-align: left;
+    color: var(--reverse-text-color);
+}
+.footer-link {
+    text-decoration: none;
+}
 /* =========================
    RESPONSIVE MOBILE
 ========================= */
@@ -159,19 +196,4 @@ clip-path: polygon(15% 30%, 14% 28%, 14% 26%, 17% 25%, 20% 24%, 23% 23%, 27% 24%
     .cadre {
         padding: 20px;
     }
-}
-.footer-content-section {
-    display: flex; 
-    align-items: flex-start; 
-    gap: 30px; 
-    margin-bottom: 40px;
-    padding: 20px;
-}
-.text-colonne {
-    flex: 2; 
-    text-decoration: none;
-    text-align: left;
-}
-.footer-link {
-    text-decoration: none;
 }
