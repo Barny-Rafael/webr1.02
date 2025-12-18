@@ -4,54 +4,65 @@
 * Autoprefixer: v10.4.7
 * Browsers: last 4 version
 */
+
 /*
 J'ai fait commenté par IA car je déteste écrire.
 Je me suis permis d'utiliser autoprefixer car cela nous est donné par monsieur Martin-Nevot dans le CM-1-1.
 Signé l'équipe de MusKi.
 */
+
+/* --- Variables de Thème (Light/Dark Mode) --- */
 :root {
     /* Thème clair */
-    --color-primary-light: #000000;
-    --color-secondary-light: #f4f4f4;
-    --content-light: #ffffff;
-    --link-color-light: #0000EE;
+    --color-primary-light: #000000; /* Texte principal (noir) */
+    --color-secondary-light: #f4f4f4; /* Arrière-plan (blanc cassé) */
+    --content-light: #ffffff; /* Fond des blocs de contenu (blanc pur) */
+    --link-color-light: #0000EE; /* Couleur des liens (bleu standard) */
 
     /* Thème sombre */
-    --color-primary-dark: #f4f4f4;
-    --color-secondary-dark: #000000;
-    --content-dark: #333333;
-    --link-color-dark: #1fd2ff;
+    --color-primary-dark: #f4f4f4; /* Texte principal (blanc cassé) */
+    --color-secondary-dark: #000000; /* Arrière-plan (noir) */
+    --content-dark: #333333; /* Fond des blocs de contenu (gris foncé) */
+    --link-color-dark: #1fd2ff; /* Couleur des liens (bleu cyan lumineux) */
 
-    /* Par défaut : thème sombre */
+    /* Définition des couleurs par défaut (Thème sombre) */
     --primary-color: var(--color-primary-dark);
     --secondary-color: var(--color-secondary-dark);
     --content-color: var(--content-dark);
     --link-color: var(--link-color-dark);
 }
+
+/* Application du thème clair */
 .light {
     --primary-color: var(--color-primary-light);
     --secondary-color: var(--color-secondary-light);
     --content-color: var(--content-light);
     --link-color: var(--link-color-light);
 }
+
+/* --- Styles de Base --- */
 body {
     font-family: sans-serif;
     margin: 0;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--secondary-color); /* Couleur d'arrière-plan du thème actuel */
+    color: var(--primary-color); /* Couleur de texte du thème actuel */
 }
+
+/* Conteneur principal du contenu de la page */
 .page-content {
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 900px; /* Limite de largeur */
+    margin: 0 auto; /* Centrage horizontal */
     padding: 20px;
 }
 
 /* --- Style de l'En-tête (Header) --- */
 .header {
-    background-color: var(--primary-color); 
+    background-color: var(--primary-color);
     padding: 10px 0;
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Le texte de l'en-tête est en couleur secondaire (l'inverse) */
 }
+
+/* Conteneur de la barre de navigation */
 .nav-container {
     max-width: 900px;
     margin: 0 auto;
@@ -60,124 +71,137 @@ body {
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
+            justify-content: space-between; /* Espacement entre le logo et les liens */
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
+            align-items: center; /* Centrage vertical */
     padding: 0 20px;
 }
+
+/* Style de l'image du logo */
 .logo img {
     height: 50px;
 }
 
-/* --- Styles de la Mise en Page Alternée (Flexbox) --- */
+/* --- Styles de la Mise en Page Alternée (Content Sections) --- */
+
+/* Style général pour toutes les sections de contenu (Flexbox) */
 .content-section {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; 
-    -webkit-box-align: start; 
-        -ms-flex-align: start; 
-            align-items: flex-start; 
-    gap: 30px; 
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start; /* Alignement en haut des colonnes */
+    gap: 30px; /* Espace entre les colonnes */
     margin-bottom: 40px;
     padding: 20px;
-    /* Fond noir pour les sections de contenu */
-    background-color: var(--content-color);
+    background-color: var(--content-color); /* Couleur de fond du bloc de contenu (défini par le thème) */
     border-radius: 10px;
 }
 
+/* Colonne d'illustration (Image/Vidéo) */
 .illustration-colonne {
     -webkit-box-flex: 1;
         -ms-flex: 1;
-            flex: 1; 
-    min-width: 250px; 
-    max-width: 250px; 
+            flex: 1; /* Prend une part de l'espace */
+    min-width: 250px; /* Assure une taille minimale */
+    max-width: 250px; /* Assure une taille maximale fixe */
 }
 
+/* Colonne de texte */
 .text-colonne {
     -webkit-box-flex: 2;
         -ms-flex: 2;
-            flex: 2; 
+            flex: 2; /* Prend deux parts de l'espace (deux fois plus large que l'illustration) */
     text-decoration: none;
 }
 
 /* ALTERNANCE : Texte à Droite (Image à Gauche) */
 .section-texte-gauche {
+    /* Inverse l'ordre des éléments Flex */
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse; 
+            flex-direction: row-reverse;
 }
 
 /* ALTERNANCE : Texte à Gauche (Image à Droite) */
 .section-texte-droite {
+    /* Ordre par défaut */
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row; 
+            flex-direction: row;
 }
 
-/* Style des images d'illustration */
+/* Style des images à l'intérieur de la colonne d'illustration */
 .illustration-colonne img {
     width: 100%;
     height: auto;
     border-radius: 5px;
     display: block;
-    margin-top: 20px; 
-    /* Fond gris moyen pour les placeholders (pour que l'image ressorte du noir) */
-    background-color: #222222; 
+    margin-top: 20px;
+    background-color: #222222; /* Fond pour les placeholders d'images */
     min-height: 150px;
 }
 
-/* Style spécifique aux listes dans les sections */
+/* --- Styles des Listes dans les Sections --- */
 .content-section ul, .content-section ol {
     padding-left: 20px;
 }
 
+/* Titre des groupes de muscles dans une liste (sans puce) */
 .muscle-group-title {
-    list-style: none; 
+    list-style: none; /* Supprime la puce */
     font-weight: bold;
     margin-top: 10px;
 }
 
-/* Style pour le tableau d'exercices */
+/* --- Styles du Tableau d'Exercices --- */
 .exercices-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse; /* Fusionne les bordures */
     margin-top: 20px;
-    /* Fond du tableau noir cassé */
-    background-color: #000000; 
+    background-color: #000000; /* Fond noir du tableau */
     margin-bottom: 40px;
     color: #f4f4f4;
 }
+
+/* Cellules et en-têtes du tableau */
 .exercices-table td, .exercices-table th {
-    /* Bordures claires */
-    border: 1px solid #ddd; 
+    border: 1px solid #ddd; /* Bordures claires */
     padding: 8px;
     text-align: left;
 }
+
+/* Mise en évidence des titres d'en-tête */
 .exercices-table strong {
-    /* Rend les titres d'en-tête du tableau plus visibles */
-    color: #FF8C00; 
+    color: #FF8C00; /* Orange (couleur d'accentuation) */
 }
+
+/* Styles des liens */
 .link {
     color: var(--link-color);
 }
 .table-link {
-    color: #1E90FF;
+    color: #1E90FF; /* Bleu spécifique pour les liens dans les tableaux */
 }
 
+/* --- Section Pied de Page (Footer) --- */
 .footer-content-section {
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; 
-    -webkit-box-align: start; 
-        -ms-flex-align: start; 
-            align-items: flex-start; 
-    gap: 30px; 
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 30px;
     padding: 20px;
     line-height: 1.5em;
 }
+
+/* Style du bouton d'action */
 .button {
     background-color: #FF8C00; /* Orange (couleur d'accentuation) */
     color: #000000;
@@ -198,18 +222,20 @@ body {
     border-radius: 5px;
 }
 
+/* Conteneur d'un groupe (label + input) */
 .form-group {
     margin-bottom: 15px;
-    /* Utilisation de Flexbox pour aligner l'étiquette et le champ */
+    /* Aligne l'étiquette et le champ verticalement */
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex; 
-    -webkit-box-orient: vertical; 
-    -webkit-box-direction: normal; 
-        -ms-flex-direction: column; 
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
             flex-direction: column;
 }
 
+/* Étiquettes (labels) */
 .contact-form label {
     display: block;
     margin-bottom: 5px;
@@ -217,18 +243,20 @@ body {
     color: var(--primary-color);
 }
 
+/* Champs de texte et zones de texte */
 .contact-form input[type="text"],
 .contact-form textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #555555;
     border-radius: 3px;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
+    background-color: var(--primary-color); /* La couleur primaire est utilisée comme fond (ex: blanc cassé en dark mode) */
+    color: var(--secondary-color); /* La couleur secondaire est utilisée pour le texte tapé */
     -webkit-box-sizing: border-box;
             box-sizing: border-box; /* Inclut le padding et border dans la largeur */
 }
 
+/* Zone de texte */
 .contact-form textarea {
     resize: vertical; /* Permet uniquement de redimensionner verticalement */
 }
@@ -238,10 +266,11 @@ body {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row; /* Alignement en ligne */
+            flex-direction: row; /* Aligne les options en ligne */
     gap: 15px;
 }
 
+/* Étiquettes des boutons radio */
 .radio-group label {
     font-weight: normal;
     margin-right: 10px;
