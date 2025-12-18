@@ -1,27 +1,25 @@
 :root {
     /* Thème clair */
     --color-primary-light: #000000;
-    --background-light: #f4f4f4;
-    --text-light: #000000;
-    --reverse-text-light: #f4f4f4;
+    --color-secondary-light: #f4f4f4;
+    --link-color-light: #0000EE;
 
     /* Thème sombre */
     --color-primary-dark: #f4f4f4;
-    --background-dark: #000000;
-    --text-dark: #f4f4f4;
-    --reverse-text-dark: #000000;
+    --color-secondary-dark: #000000;
+    --link-color-dark: #1E90FF;
 
-    /* Par défaut : thème clair */
+    /* Par défaut : thème sombre */
     --primary-color: var(--color-primary-dark);
-    --background-color: var(--background-dark);
-    --text-color: var(--text-dark);
-    --reverse-text-color: var(--reverse-text-dark);
+    --secondary-color: var(--color-secondary-dark);
+    --content-color: var(--content-dark);
+    --link-color: var(--link-color-dark);
 }
 .light {
     --primary-color: var(--color-primary-light);
-    --background-color: var(--background-light);
-    --text-color: var(--text-light);
-    --reverse-text-color: var(--reverse-text-light);
+    --secondary-color: var(--color-secondary-light);
+    --content-color: var(--content-light);
+    --link-color: var(--link-color-light);
 }
 /* reset complet*/
 * {
@@ -33,15 +31,15 @@
 /* style global */
 body {
     font-family: sans-serif;
-    background-color: var(--background-color); 
-    color: var(--text-color); 
+    background-color: var(--secondary-color); 
+    color: var(--primary-color); 
 }
 
 /* header */
 .header {
     /* Couleur de fond claire pour l'en-tête blanc cassé */
     background-color: var(--primary-color); 
-    color: var(--text-color);
+    color: var(--secondary-color);
     padding: 10px 0;
 }
 
@@ -60,8 +58,16 @@ body {
     font-size: 30px;
 }
 
-.video-container {
-    margin-left : auto;
+.video-container { 
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.video-container video {
+    width: 100%; 
+    height: auto;
 }
 
 /* logo */
@@ -100,7 +106,7 @@ body {
     position: relative;
     background-color: #333333;
     padding: 30px;
-    border-radius: 25px;
+    border-radius: 10px;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
 }
 
@@ -159,14 +165,13 @@ body {
 .text-colonne {
     flex: 2; 
     text-decoration: none;
-    color: var(--reverse-text-color);    
 }
 .button {
     background-color: #FF8C00; /* Orange (couleur d'accentuation) */
     color: #000000;
     padding: 10px 15px;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 1em;
     font-weight: bold;
