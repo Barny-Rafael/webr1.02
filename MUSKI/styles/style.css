@@ -160,7 +160,6 @@ body {
     max-width: 500px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #333333; /* Fond légèrement plus clair que la section */
     border-radius: 5px;
 }
 
@@ -175,7 +174,7 @@ body {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: var(--reverse-text-color);
+    color: var(--primary-color);
 }
 
 .contact-form input[type="text"],
@@ -184,8 +183,8 @@ body {
     padding: 10px;
     border: 1px solid #555555;
     border-radius: 3px;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     box-sizing: border-box; /* Inclut le padding et border dans la largeur */
 }
 
