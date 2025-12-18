@@ -22,6 +22,13 @@ https://barny-rafael.alwaysdata.net/
 
 https://github.com/Barny-Rafael/webr1.02/
 
+-- Sources --
+
+https://nouvelle-techno.fr/articles/changez-de-theme-en-un-clic-tutoriel-html-css-js#etape-2-styles-avec-css-et-variables-personnalisees pour le javascript
+https://www.cssportal.com/css-clip-path-generator/ pour les clip path
+https://autoprefixer.github.io/ pour un css parfait
+https://gemini.google.com/ pour les commentaires
+
 -- Arborescence --
 ```text
 WEBR1.02/
