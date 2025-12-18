@@ -6,16 +6,16 @@
     <meta name="description" content="Maîtrisez les machines de cardio ergométriques : Skierg, Rower, Bike Erg et Echobike. Guide détaillé des techniques et astuces de pro pour maximiser votre effort.">
     <link id="theme" rel="stylesheet" href="styles/style.css">
     <link rel="icon" href="./images/favicon0.webp">
-    <script src="bouton.js"></script>
+    <script src="js/bouton.js"></script>
 </head>
 <body>
     <header class="header">
         <div class="nav-container">
-            <a href="index.html" class="nav-link">ACCUEIL</a>
+            <a href="index.html" class="button">ACCUEIL</a>
             <div class="logo">
                 <img src="./images/logo.webp" alt="Muski logo">
             </div>
-            <a href="contact.html" class="nav-link">CONTACT</a>
+            <a href="contact.html" class="button"">CONTACT</a>
         </div>
     </header>
     <div class="page-content">
@@ -87,15 +87,6 @@
                 <p>Privacy Terms</p>
             </div>
             <div class="text-colonne">
-                <h3>Entraînements</h3>
-                <ul>
-                    <li><a href="bras.html" class="footer-link">Les Bras</a></li>
-                    <li><a href="jambes.html" class="footer-link">Les Jambes</a></li>
-                    <li><a href="epaules.html" class="footer-link">Les Épaules</a></li>
-                    <li><a href="cardio.html" class="footer-link">Le Cardio</a></li>
-                </ul>
-            </div>
-            <div class="text-colonne">
                 <h3>Fondateurs</h3>
                 <ul>
                     <li>Kenzi Yacini</li>
@@ -111,8 +102,8 @@
             </div>
             <div class="text-colonne">
                 <h3>Fonctionnalités</h3>
-                <p><a href="#top" title="Revenir en haut de page">Revenir en haut</a></p>
-                <p><button onclick="changerStyle()">Changer le style</button></p>
+                <p><a href="#top" class="button" title="Revenir en haut de page">Revenir en haut</a></p>
+                <p><button id="toggle-theme" class="button">Changer de thème</button></p>
             </div>
         </div>
     </footer>
