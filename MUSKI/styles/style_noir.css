@@ -130,7 +130,7 @@ body {
     border-collapse: collapse;
     margin-top: 20px;
     /* Fond du tableau noir cassé */
-    background-color: var(--text-color); 
+    background-color: #000000; 
     margin-bottom: 40px;
     color: #f4f4f4;
 }
