@@ -32,8 +32,8 @@
 
 /* style global */
 body {
+    align-items: center;
     font-family: sans-serif;
-    margin: 0;
     background-color: var(--background-color); 
     color: var(--text-color); 
 }
@@ -59,6 +59,10 @@ body {
     text-decoration: none;
     font-weight: bold;
     font-size: 30px;
+}
+
+.video-container {
+    margin-left : auto;
 }
 
 /* logo */
