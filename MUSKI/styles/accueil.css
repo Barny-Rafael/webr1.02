@@ -216,32 +216,3 @@ body {
     font-weight: bold;
     text-decoration: none;
 }
-/*-- RESPONSIVE MOBILE --*/
-@media screen and (max-width: 768px) {
-
-    header {
-        height: 70px;
-        padding: 0 20px;
-    }
-
-    .logo {
-        max-height: 55px;
-    }
-
-    .intro {
-        width: 90%;
-    }
-
-    .intro h1 {
-        font-size: 28px;
-    }
-
-    .base,
-    .muscle {
-        width: 220px;
-    }
-
-    .cadre {
-        padding: 20px;
-    }
-}
