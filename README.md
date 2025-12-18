@@ -20,7 +20,7 @@ https://barny-rafael.alwaysdata.net/
 
 -- Lien vers notre projet GitHub --
 
-https://github.com/Barny-Rafael/webr1.02/edit/main/
+https://github.com/Barny-Rafael/webr1.02/
 
 -- Arborescence --
 ```text
